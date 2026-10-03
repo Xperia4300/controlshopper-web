@@ -316,7 +316,7 @@
   .col li{font-size:14.5px;padding:10px 0;border-bottom:1px solid var(--line);display:flex;gap:10px}
   .col.good li{border-bottom-color:rgba(255,255,255,.12);color:rgba(255,255,255,.82)}
   .col li:last-child{border-bottom:none}
-  .col li::before{content:'—';opacity:.5;flex-shrink:0}
+  .col li::before{content:'✕';color:#DC2626;font-weight:700;font-size:13px;line-height:1.7;flex-shrink:0}
   .col.good li::before{content:'✓';color:var(--teal-400);opacity:1;font-weight:700}
 
   /* ---------- Founder ---------- */
@@ -332,16 +332,7 @@
   .founder-in{position:relative;z-index:2;max-width:660px}
   .founder h2{color:#fff;font-size:clamp(25px,3.4vw,34px);margin-bottom:16px}
   .founder p{color:rgba(255,255,255,.82);font-size:16.5px;margin-bottom:14px}
-  .founder .sign{
-    display:flex;align-items:center;gap:13px;margin-top:26px;padding-top:22px;
-    border-top:1px solid rgba(255,255,255,.16);
-  }
-  .founder .av{
-    width:46px;height:46px;border-radius:50%;background:var(--teal);color:#fff;
-    display:grid;place-items:center;font-weight:700;font-size:16px;flex-shrink:0;
-  }
-  .founder .sign b{display:block;color:#fff;font-size:15px;font-weight:700}
-  .founder .sign span{display:block;color:rgba(255,255,255,.65);font-size:13.5px}
+  .founder p:last-child{margin-bottom:0}
 
   /* ---------- FAQ ---------- */
   .faq{max-width:780px;margin:0 auto}
@@ -478,21 +469,21 @@
     <div class="phone reveal" style="--d:0.15s">
       <div class="screen">
         <div class="screen-top">
-          <span>Turno PM · Hoy</span>
+          <span>Turno Full · Hoy</span>
           <span class="chip">EN RUTA</span>
         </div>
         <div class="neto-card">
           <small>Neto del día</small>
-          <strong>$18.561</strong>
-          <div class="sub">7 pedidos · 42 km recorridos</div>
+          <strong>$45.136</strong>
+          <div class="sub">14 pedidos · 86 km recorridos</div>
         </div>
         <div class="mini-row">
-          <div class="mini"><small>SKUs</small><b>118</b></div>
-          <div class="mini"><small>Multiorden</small><b>2</b></div>
+          <div class="mini"><small>SKUs</small><b>231</b></div>
+          <div class="mini"><small>Multiorden</small><b>4</b></div>
         </div>
-        <div class="order"><span>Pedido #142 · 23 SKUs</span><b>$3.240</b></div>
-        <div class="order amber"><span>Ruta multiorden ×3</span><b>$6.890</b></div>
-        <div class="order"><span>Pedido #144 · 11 SKUs</span><b>$2.105</b></div>
+        <div class="order"><span>Pedido #218 · 31 SKUs</span><b>$4.120</b></div>
+        <div class="order amber"><span>Ruta multiorden ×3</span><b>$8.450</b></div>
+        <div class="order"><span>Pedido #221 · 14 SKUs</span><b>$2.690</b></div>
       </div>
     </div>
   </div>
@@ -683,13 +674,6 @@
         <h2>La hice porque la necesitaba yo primero</h2>
         <p>Trabajo como shopper en Linares. Durante meses terminé cada turno anotando pedidos en el celular y sacando cuentas a mano, y nunca me cuadraba del todo — sobre todo con multiorden.</p>
         <p>ControlShopper es la herramienta que me faltaba: calcula el neto mientras trabajo, guarda el historial y me deja exportarlo si tengo que reclamar una diferencia. La estoy compartiendo con mis compañeros porque sé que a ellos les pasa lo mismo.</p>
-        <div class="sign">
-          <div class="av">JC</div>
-          <div>
-            <b>Juan Carlos</b>
-            <span>Shopper en Linares · Creador de ControlShopper</span>
-          </div>
-        </div>
       </div>
     </div>
   </div>
