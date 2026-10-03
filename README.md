@@ -50,10 +50,35 @@ Cada push a `main` despliega automáticamente.
 | Naranjo      | `#F59E0B` | Plan Pro, badge "3 días gratis", paso 03         |
 | Menta claro  | `#F1FAF8` | Fondos de secciones alternas                     |
 
-Tipografía: **Manrope** (Google Fonts), la misma de la app.
-
 Los colores están definidos como variables CSS en `:root`, al inicio de `index.html`.
 Cambiar uno ahí lo cambia en toda la página.
+
+## Tipografía (regla del proyecto)
+
+**Manrope**, de Google Fonts. Es la misma fuente de la app (`@expo-google-fonts/manrope`)
+y la del logotipo de ControlCoding. **No se reemplaza**: la coherencia entre app, web y
+logo depende de esto.
+
+```
+font-family: 'Manrope', system-ui, -apple-system, sans-serif;
+```
+
+Pesos cargados: `400 500 600 700 800 900`.
+
+Cómo se usan:
+
+| Elemento                          | Peso | Nota                                        |
+|-----------------------------------|------|---------------------------------------------|
+| Títulos (h1–h4)                   | 700  | Mantiene las curvas redondeadas de Manrope  |
+| H1 del hero                       | 800  | Excepción, por impacto                      |
+| Logo ControlShopper / "coding"    | 800  | Definido por la marca                       |
+| Botones                           | 600  |                                             |
+| Cifras grandes y etiquetas        | 700  |                                             |
+| Texto de cuerpo                   | 400  | `line-height: 1.65`                         |
+
+**Por qué 700 y no 800 en los títulos:** en Manrope los pesos muy altos achatan las
+curvas y la fuente pierde el carácter redondeado que define la marca. El `letter-spacing`
+negativo se mantiene suave (`-.008em`) por la misma razón — apretarla más la endurece.
 
 ## Qué incluye
 

@@ -9,7 +9,7 @@
 <script>document.documentElement.className+=' js';</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 <style>
   :root{
     --green-900:#00342F;
@@ -34,9 +34,10 @@
   body{
     font-family:'Manrope',system-ui,-apple-system,sans-serif;
     color:var(--body);background:var(--white);
-    line-height:1.6;-webkit-font-smoothing:antialiased;
+    line-height:1.65;-webkit-font-smoothing:antialiased;
+    text-rendering:optimizeLegibility;
   }
-  h1,h2,h3,h4{color:var(--ink);line-height:1.15;letter-spacing:-.02em;font-weight:800}
+  h1,h2,h3,h4{color:var(--ink);line-height:1.22;letter-spacing:-.008em;font-weight:700}
   a{text-decoration:none;color:inherit}
   .wrap{max-width:var(--max);margin:0 auto;padding:0 20px}
   section{padding:84px 0}
@@ -44,7 +45,7 @@
   /* ---------- Buttons ---------- */
   .btn{
     display:inline-flex;align-items:center;gap:9px;
-    padding:14px 26px;border-radius:999px;font-weight:700;font-size:15px;
+    padding:14px 26px;border-radius:999px;font-weight:600;font-size:15px;
     transition:transform .18s ease,box-shadow .18s ease,background .18s ease;
     border:none;cursor:pointer;white-space:nowrap;
   }
@@ -152,7 +153,7 @@
     font-size:13px;font-weight:600;margin-bottom:22px;
   }
   .pill .dot{width:7px;height:7px;border-radius:50%;background:var(--teal-400);box-shadow:0 0 0 4px rgba(43,203,185,.25)}
-  .hero h1{color:#fff;font-size:clamp(34px,5vw,56px);margin-bottom:20px}
+  .hero h1{color:#fff;font-size:clamp(34px,5vw,56px);font-weight:800;letter-spacing:-.018em;margin-bottom:20px}
   .hero h1 em{font-style:normal;color:var(--teal-400)}
   .hero p.lead{color:rgba(255,255,255,.8);font-size:18px;max-width:510px;margin-bottom:30px}
   .hero-btns{display:flex;gap:13px;flex-wrap:wrap;margin-bottom:28px}
@@ -177,7 +178,7 @@
     background:linear-gradient(145deg,var(--teal),#009C8C);border-radius:16px;padding:17px;margin-bottom:13px;
   }
   .neto-card small{display:block;color:rgba(255,255,255,.82);font-size:11px;font-weight:600;margin-bottom:3px}
-  .neto-card strong{display:block;color:#fff;font-size:29px;font-weight:800;letter-spacing:-.03em;line-height:1.1}
+  .neto-card strong{display:block;color:#fff;font-size:29px;font-weight:700;letter-spacing:-.015em;line-height:1.1}
   .neto-card .sub{color:rgba(255,255,255,.8);font-size:11px;font-weight:600;margin-top:5px}
   .mini-row{display:flex;gap:9px;margin-bottom:13px}
   .mini{flex:1;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);border-radius:12px;padding:11px}
@@ -195,12 +196,12 @@
   .strip{background:var(--teal);padding:0}
   .strip .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;padding-top:34px;padding-bottom:34px}
   .strip .item{text-align:center;color:#00302B}
-  .strip .item b{display:block;font-size:28px;font-weight:800;letter-spacing:-.02em;line-height:1.1}
+  .strip .item b{display:block;font-size:28px;font-weight:700;letter-spacing:-.01em;line-height:1.1}
   .strip .item span{font-size:13px;font-weight:600;opacity:.78}
 
   /* ---------- Section heading ---------- */
   .eyebrow{
-    display:inline-block;font-size:12.5px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;
+    display:inline-block;font-size:12.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
     color:var(--teal);background:var(--teal-100);padding:6px 14px;border-radius:999px;margin-bottom:16px;
   }
   .eyebrow.on-dark{color:var(--teal-400);background:rgba(0,181,163,.16)}
@@ -221,7 +222,7 @@
   .step:hover{transform:translateY(-4px);box-shadow:0 14px 34px rgba(0,82,74,.1);border-color:var(--teal)}
   .step .num{
     width:46px;height:46px;border-radius:14px;background:var(--teal);color:#fff;
-    display:grid;place-items:center;font-weight:800;font-size:17px;margin-bottom:18px;
+    display:grid;place-items:center;font-weight:700;font-size:17px;margin-bottom:18px;
     box-shadow:0 7px 18px rgba(0,181,163,.3);
   }
   .step:nth-child(2) .num{background:var(--green-800);box-shadow:0 7px 18px rgba(0,82,74,.28)}
@@ -246,7 +247,7 @@
   .feat:nth-child(2) .ico svg{stroke:#92610A}
   .feat:nth-child(3) .ico{background:#E2F0EE}
   .feat:nth-child(4) .ico{background:var(--teal-100)}
-  .feat .lbl{font-size:12px;font-weight:800;letter-spacing:.07em;text-transform:uppercase;color:var(--teal);margin-bottom:8px;display:block}
+  .feat .lbl{font-size:12px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--teal);margin-bottom:8px;display:block}
   .feat:nth-child(2) .lbl{color:#B4780B}
   .feat h3{font-size:20px;margin-bottom:10px}
   .feat p{font-size:15px}
@@ -279,11 +280,11 @@
   .price.pro{border:2px solid var(--amber);box-shadow:0 18px 44px rgba(245,158,11,.18)}
   .ribbon{
     position:absolute;top:-13px;left:30px;background:var(--amber);color:#4A2C00;
-    font-size:12px;font-weight:800;padding:5px 15px;border-radius:999px;letter-spacing:.02em;
+    font-size:12px;font-weight:700;padding:5px 15px;border-radius:999px;letter-spacing:.02em;
   }
-  .price .plan{font-size:13px;font-weight:800;letter-spacing:.09em;text-transform:uppercase;color:var(--teal);margin-bottom:10px}
+  .price .plan{font-size:13px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--teal);margin-bottom:10px}
   .price.pro .plan{color:#B4780B}
-  .price .amt{font-size:46px;font-weight:800;color:var(--ink);letter-spacing:-.03em;line-height:1}
+  .price .amt{font-size:46px;font-weight:700;color:var(--ink);letter-spacing:-.015em;line-height:1}
   .price .per{font-size:14px;font-weight:600;color:var(--body);margin:9px 0 22px}
   .price ul{list-style:none;margin-bottom:26px}
   .price li{display:flex;gap:11px;align-items:flex-start;font-size:15px;padding:7px 0}
@@ -295,7 +296,7 @@
     font-size:14px;font-weight:600;color:var(--body);
   }
   .guarantee span{display:flex;align-items:center;gap:7px}
-  .guarantee span::before{content:'✓';color:var(--teal);font-weight:800}
+  .guarantee span::before{content:'✓';color:var(--teal);font-weight:700}
 
   /* ---------- Compare ---------- */
   .compare-sec{background:var(--mist)}
@@ -307,7 +308,7 @@
   .col.good h3{color:#fff}
   .col h3 i{
     width:28px;height:28px;border-radius:9px;display:grid;place-items:center;font-style:normal;
-    font-size:15px;font-weight:800;
+    font-size:15px;font-weight:700;
   }
   .col.bad h3 i{background:#FEE2E2;color:#B91C1C}
   .col.good h3 i{background:var(--teal);color:#fff}
@@ -316,7 +317,7 @@
   .col.good li{border-bottom-color:rgba(255,255,255,.12);color:rgba(255,255,255,.82)}
   .col li:last-child{border-bottom:none}
   .col li::before{content:'—';opacity:.5;flex-shrink:0}
-  .col.good li::before{content:'✓';color:var(--teal-400);opacity:1;font-weight:800}
+  .col.good li::before{content:'✓';color:var(--teal-400);opacity:1;font-weight:700}
 
   /* ---------- Founder ---------- */
   .founder-sec{background:#fff}
@@ -337,7 +338,7 @@
   }
   .founder .av{
     width:46px;height:46px;border-radius:50%;background:var(--teal);color:#fff;
-    display:grid;place-items:center;font-weight:800;font-size:16px;flex-shrink:0;
+    display:grid;place-items:center;font-weight:700;font-size:16px;flex-shrink:0;
   }
   .founder .sign b{display:block;color:#fff;font-size:15px;font-weight:700}
   .founder .sign span{display:block;color:rgba(255,255,255,.65);font-size:13.5px}
@@ -379,7 +380,7 @@
   footer .logo{color:#fff;margin-bottom:12px}
   .foot-top p{font-size:14px;max-width:320px}
   .foot-links{display:flex;gap:40px;flex-wrap:wrap}
-  .foot-col h4{color:#fff;font-size:13px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;margin-bottom:13px}
+  .foot-col h4{color:#fff;font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;margin-bottom:13px}
   .foot-col a{display:block;font-size:14px;padding:4px 0;transition:color .15s}
   .foot-col a:hover{color:var(--teal-400)}
   .foot-bot{
@@ -629,7 +630,7 @@
         <ul>
           <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>Todo lo de la prueba gratuita</li>
           <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>Historial ilimitado de turnos</li>
-          <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>Acceso con código de invitación</li>
+          <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>Actualizaciones y nuevas funciones</li>
           <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>Soporte prioritario</li>
         </ul>
         <a href="#descargar" class="btn btn-primary">Descargar y probar gratis</a>
