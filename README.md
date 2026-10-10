@@ -108,7 +108,7 @@ temporizador de seguridad: si el `IntersectionObserver` fallara, todo se muestra
 ## Contacto
 
 - Soporte: supportcontrolcoding@gmail.com
-- WhatsApp: [+56 9 5490 1981](https://wa.me/56954901981)
+- WhatsApp: [+56 9 4094 6966](https://wa.me/56940946966)
 - Política de privacidad: https://xperia4300.github.io/controlshopper-legal/
 
 ---
