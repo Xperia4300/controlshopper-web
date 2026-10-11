@@ -100,9 +100,9 @@ temporizador de seguridad: si el `IntersectionObserver` fallara, todo se muestra
 
 ## Pendientes antes de publicar
 
-- [ ] Reemplazar el `href="#"` del botón "Disponible en Google Play" por el link real de la ficha
-- [ ] Agregar `og:image` y `twitter:card` para que se vea bien al compartir por WhatsApp
-- [ ] Agregar favicon (`favicon.ico` o `icon.png` en la raíz)
+- [x] Botones de descarga apuntan a la ficha de Google Play (con referrer utm_source=web)
+- [x] og:image y twitter:card
+- [x] Favicon
 - [ ] Sumar testimonios reales de los compañeros que probaron la app, con su autorización
 
 ## Contacto
