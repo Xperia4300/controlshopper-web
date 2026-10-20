@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>ControlShopper — Controla tus ganancias, turno tras turno</title>
-<meta name="description" content="La app para shoppers, pickers y drivers que calcula tu neto en tiempo real: tarifa base, SKUs, kilómetros y multiorden. 3 días gratis.">
+<meta name="description" content="La app para shoppers, pickers y drivers que calcula tu neto en tiempo real: tarifa base, SKUs, kilómetros y multiorden. Prueba gratis.">
 <meta name="theme-color" content="#00524A">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
@@ -17,7 +17,7 @@
 <meta property="og:site_name" content="ControlShopper">
 <meta property="og:url" content="https://controlshopper.cl/">
 <meta property="og:title" content="ControlShopper — Tus ganancias, claras desde el primer pedido">
-<meta property="og:description" content="La app para shoppers, pickers y drivers que calcula tu neto en tiempo real. 3 días gratis, luego $1.990 al mes IVA incluido.">
+<meta property="og:description" content="La app para shoppers, pickers y drivers que calcula tu neto en tiempo real. Prueba gratis, luego $1.990 al mes IVA incluido.">
 <meta property="og:image" content="https://controlshopper.cl/og-image.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -451,6 +451,24 @@
     .phone{width:245px}
     .foot-links{gap:28px}
   }
+
+  /* Barra fija de descarga (solo celular) */
+  .dl-bar{display:none}
+  @media(max-width:880px){
+    .dl-bar{
+      display:flex;align-items:center;gap:12px;position:fixed;left:0;right:0;bottom:0;z-index:44;
+      padding:12px 16px calc(12px + env(safe-area-inset-bottom));
+      background:rgba(255,255,255,.97);border-top:1px solid rgba(0,82,74,.12);
+      box-shadow:0 -8px 24px rgba(0,0,0,.12);
+      transform:translateY(110%);transition:transform .3s cubic-bezier(.16,1,.3,1);
+    }
+    .dl-bar.show{transform:translateY(0)}
+    .dl-bar .dl-txt{flex:1;min-width:0;font-size:13px;line-height:1.3;color:#00524A}
+    .dl-bar .dl-txt b{display:block;font-size:15px}
+    .dl-bar .btn{padding:12px 18px;font-size:15px;white-space:nowrap}
+    body.has-bar .wa{bottom:96px}
+    body.has-bar footer{padding-bottom:90px}
+  }
 </style>
 </head>
 <body>
@@ -502,7 +520,7 @@
         <a href="#como-funciona" class="btn btn-ghost btn-lg">Ver cómo funciona</a>
       </div>
       <div class="hero-tags">
-        <span class="tag tag-amber">3 días gratis</span>
+        <span class="tag tag-amber">Prueba gratis</span>
         <span class="tag tag-soft">Sin tarjeta</span>
         <span class="tag tag-soft">Cancela cuando quieras</span>
         <span class="tag tag-soft">Historial en tu celular</span>
@@ -535,7 +553,7 @@
 <!-- STATS STRIP -->
 <div class="strip">
   <div class="wrap">
-    <div class="item reveal"><b>3 días</b><span>de prueba gratis</span></div>
+    <div class="item reveal"><b>Gratis</b><span>para probar, sin tarjeta</span></div>
     <div class="item reveal" style="--d:0.07s"><b>3 roles</b><span>Shopper, Picker, Driver</span></div>
     <div class="item reveal" style="--d:0.14s"><b>100%</b><span>historial en tu celular</span></div>
     <div class="item reveal" style="--d:0.21s"><b>$1.990</b><span>al mes, IVA incluido</span></div>
@@ -647,7 +665,7 @@
       <div class="price reveal">
         <div class="plan">Prueba</div>
         <div class="amt">$0</div>
-        <div class="per">3 días · Sin tarjeta · Sin compromiso</div>
+        <div class="per">Prueba gratis · Sin tarjeta · Sin compromiso</div>
         <ul>
           <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>Todas las funciones incluidas</li>
           <li><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>Cálculo en tiempo real</li>
@@ -731,7 +749,7 @@
     </div>
     <div class="faq">
       <details open class="reveal">
-        <summary>¿Cómo se paga después de los 3 días gratis?</summary>
+        <summary>¿Cómo se paga después de la prueba gratis?</summary>
         <p>A través de tu cuenta de Google Play, con cualquier tarjeta de débito o crédito, como Cuenta RUT, Mach o Tenpo. La prueba no pide tarjeta: cuando termina, tú decides si te suscribes por $1.990 al mes (IVA incluido). Puedes cancelar cuando quieras desde Google Play, sin letra chica.</p>
       </details>
       <details class="reveal">
@@ -748,7 +766,7 @@
       </details>
       <details class="reveal">
         <summary>¿Dónde puedo descargar ControlShopper?</summary>
-        <p>ControlShopper está disponible en Google Play para Android. Búscala como "ControlShopper" o descárgala directamente desde el botón en esta página. Al instalar tienes 3 días de prueba gratis.</p>
+        <p>ControlShopper está disponible en Google Play para Android. Búscala como "ControlShopper" o descárgala directamente desde el botón en esta página. Al instalar tienes una prueba gratis.</p>
       </details>
       <details class="reveal">
         <summary>¿Va a tener versión para iPhone?</summary>
@@ -762,13 +780,13 @@
 <section class="cta-sec" id="descargar">
   <div class="wrap reveal">
     <h2>Empieza tu próximo turno sabiendo cuánto ganas</h2>
-    <p>Descárgala y empieza con 3 días completamente gratis. Sin tarjeta, sin compromiso.</p>
+    <p>Descárgala y pruébala gratis. Sin tarjeta, sin compromiso.</p>
     <a href="https://play.google.com/store/apps/details?id=com.jctro.controlshopper&amp;referrer=utm_source%3Dweb%26utm_medium%3Dlanding" class="btn btn-dark btn-lg">
       <svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor"><path d="M3.6 2.3c-.3.3-.5.8-.5 1.4v16.6c0 .6.2 1.1.5 1.4l.1.1 9.3-9.3v-.2L3.7 2.2l-.1.1zm12.5 6.2L13 5.4 4.4 1.3l11.7 7.2zM4.4 22.7L13 18.6l3.1-3.1-11.7 7.2zm13.4-10.3l2.9-1.7c.9-.5.9-1.4 0-1.9l-2.9-1.7-3.3 3.3 3.3 3.3z"/></svg>
       Disponible en Google Play
     </a>
     <div class="cta-tags">
-      <span class="tag">3 días gratis al instalar</span>
+      <span class="tag">Prueba gratis al instalar</span>
       <span class="tag">Sin tarjeta requerida</span>
       <span class="tag">Cancela cuando quieras</span>
     </div>
@@ -846,6 +864,14 @@
   </div>
 </footer>
 
+<div class="dl-bar" id="dlbar" aria-hidden="true">
+  <div class="dl-txt"><b>ControlShopper</b>Prueba gratis · Android</div>
+  <a href="https://play.google.com/store/apps/details?id=com.jctro.controlshopper&amp;referrer=utm_source%3Dweb%26utm_medium%3Dlanding" class="btn btn-primary" tabindex="-1">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M3.6 2.3c-.3.3-.5.8-.5 1.4v16.6c0 .6.2 1.1.5 1.4l.1.1 9.3-9.3v-.2L3.7 2.2l-.1.1zm12.5 6.2L13 5.4 4.4 1.3l11.7 7.2zM4.4 22.7L13 18.6l3.1-3.1-11.7 7.2zm13.4-10.3l2.9-1.7c.9-.5.9-1.4 0-1.9l-2.9-1.7-3.3 3.3 3.3 3.3z"/></svg>
+    Descargar gratis
+  </a>
+</div>
+
 <a class="wa" href="https://wa.me/56940946966?text=Hola!%20tengo%20dudas%20acerca%20de%20la%20app" target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp">
   <svg viewBox="0 0 24 24"><path d="M17.5 14.4c-.3-.2-1.7-.9-2-1-.3-.1-.4-.1-.6.1s-.7.9-.9 1.1c-.2.2-.3.2-.6.1-1.6-.8-2.7-1.5-3.8-3.4-.3-.5.3-.5.8-1.5.1-.2 0-.4 0-.5s-.6-1.5-.9-2c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5 4.4 1.9.8 2.6.9 3.5.8.6-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3z"/><path d="M12 2a10 10 0 00-8.6 15L2 22l5.2-1.4A10 10 0 1012 2zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3.1.8.8-3-.2-.3a8.2 8.2 0 1115.4-4.1 8.2 8.2 0 01-8.2 8z"/></svg>
 </a>
@@ -880,6 +906,39 @@
       if (window.innerWidth > 880) setMenu(false);
     });
   }
+
+  /* ---------- Barra de descarga al hacer scroll (celular) ---------- */
+  var bar = document.getElementById('dlbar');
+  var heroBtns = document.querySelector('.hero-btns');
+  if (bar && heroBtns) {
+    document.body.classList.add('has-bar');
+    var setBar = function (show) {
+      bar.classList.toggle('show', show);
+      bar.setAttribute('aria-hidden', show ? 'false' : 'true');
+      bar.querySelector('a').setAttribute('tabindex', show ? '0' : '-1');
+    };
+    if ('IntersectionObserver' in window) {
+      new IntersectionObserver(function (en) {
+        var e = en[0];
+        setBar(!e.isIntersecting && e.boundingClientRect.top < 0);
+      }).observe(heroBtns);
+    } else {
+      setBar(true);
+    }
+  }
+
+  /* ---------- Pasar la campaña (utm) al enlace de Google Play ---------- */
+  try {
+    var q = new URLSearchParams(window.location.search);
+    if (q.get('utm_source')) {
+      var ref = 'utm_source=' + q.get('utm_source') +
+        '&utm_medium=' + (q.get('utm_medium') || 'web') +
+        (q.get('utm_campaign') ? '&utm_campaign=' + q.get('utm_campaign') : '');
+      Array.prototype.forEach.call(document.querySelectorAll('a[href*="play.google.com"]'), function (a) {
+        a.href = 'https://play.google.com/store/apps/details?id=com.jctro.controlshopper&referrer=' + encodeURIComponent(ref);
+      });
+    }
+  } catch (err) {}
 
   /* ---------- Animaciones al hacer scroll ---------- */
   var els = document.querySelectorAll('.reveal');
